@@ -18,19 +18,25 @@ def lab3Question2(decimal_number):
     # Return "zero" if the number is 0, "positive" if the number is positive, and "negative" if the number is negative
     # Return "invalid" if the input is not a float
 
-    # Check if the input is a float
-    if isinstance(decimal_number, int) or not isinstance(decimal_number, float):
-        return "invalid"
+     # Check if the input is specifically a float
+    if isinstance(decimal_number, float):
+        # Check if the number is zero
+        if decimal_number == 0:
+            return "zero"
+        # Check if the number is positive
+        elif decimal_number > 0:
+            return "positive"
+        # If the number is not positive or zero, it must be negative
+        else:
+            return "negative"
     
-    # Check if the number is zero
-    if decimal_number == 0:
-        return "zero"
-    # Check if the number is positive
-    elif decimal_number > 0:
-        return "positive"
-    # If the number is not positive or zero, it must be negative
+    # Return "invalid" if the input is not a float
+    elif isinstance(decimal_number, int):
+        return "invalid"
+    # Handle any other type as invalid
     else:
-        return "negative"
+        return "invalid"
+
     pass
 
 def lab3Question3(year):
