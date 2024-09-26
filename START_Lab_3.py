@@ -19,7 +19,7 @@ def lab3Question2(decimal_number):
     # Return "invalid" if the input is not a float
 
      # Check if the input is specifically a float
-    def lab3Question2(decimal_number):
+    
     # Check if the input is a float
     if isinstance(decimal_number, float):
         # Check if the number is zero
